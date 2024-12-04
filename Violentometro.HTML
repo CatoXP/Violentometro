@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violentómetro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2C3E50;
+    }
+
+    .background {
+      color: white;
+      text-align: center;
+    }
+
+    /* Encabezado */
+    header {
+      background-color: #34495E;
+      padding: 30px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    header h2 {
+      margin: 10px 0 0;
+      font-size: 20px;
+      color: #ECF0F1;
+    }
+
+    /* Secciones */
+    .section {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .green {
+      background-color: #7DCEA0;
+      color: #1E5631;
+    }
+
+    .yellow {
+      background-color: #F4D03F;
+      color: #9C640C;
+    }
+
+    .red {
+      background-color: #E74C3C;
+      color: #641E16;
+    }
+
+    /* Iconos */
+    .icon {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .alert-icon {
+      background-color: #1E5631;
+    }
+
+    .react-icon {
+      background-color: #9C640C;
+    }
+
+    .help-icon {
+      background-color: #641E16;
+    }
+
+    .danger-circle {
+      background-color: rgba(231, 76, 60, 0.3);
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      line-height: 60px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #E74C3C;
+    }
+
+    /* Gráfica */
+    .chart-container {
+      margin: 30px auto;
+      max-width: 800px;
+      text-align: left;
+      background-color: #ECF0F1;
+      color: #34495E;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .chart-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .chart-label {
+      width: 150px;
+    }
+
+    .bar {
+      height: 20px;
+      background-color: #34495E;
+    }
+
+    .bar-80 {
+      width: 80%;
+    }
+
+    .bar-50 {
+      width: 50%;
+    }
+
+    .bar-30 {
+      width: 30%;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #34495E;
+      padding: 20px;
+      color: white;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fondo principal -->
+  <div class="background">
+    <!-- Encabezado -->
+    <header>
+      <h1>VIOLENTÓMETRO</h1>
+      <h2>IDENTIFICANDO LA VIOLENCIA DE GÉNERO</h2>
+    </header>
+
+    <!-- Sección verde -->
+    <section class="section green">
+      <div class="icon alert-icon">!</div>
+      <h3>¡ALERTA! - Violencia Sutil</h3>
+      <ul>
+        <li><span class="number"></span> Bromas hirientes y humillantes</li>
+        <li><span class="number"></span> Chantaje emocional</li>
+        <li><span class="number"></span> Ignorar / Ley del hielo</li>
+        <li><span class="number"></span> Mentir y manipular</li>
+      </ul>
+    </section>
+
+    <!-- Sección amarilla -->
+    <section class="section yellow">
+      <div class="icon react-icon">!</div>
+      <h3>¡REACCIONA! - Violencia Moderada</h3>
+      <ul>
+        <li><span class="number"></span> Humillación pública</li>
+        <li><span class="number"></span> Control económico y social</li>
+        <li><span class="number"></span> Intimidación y amenazas</li>
+        <li><span class="number"></span> Destrucción de pertenencias</li>
+      </ul>
+    </section>
+
+    <!-- Sección roja -->
+    <section class="section red">
+      <div class="icon help-icon">SOS</div>
+      <h3>¡PIDE AYUDA! - Violencia Severa</h3>
+      <ul>
+        <li><span class="number"></span> Encierro y aislamiento total</li>
+        <li><span class="number"></span> Agresiones físicas graves</li>
+        <li><span class="number"></span> Abuso y violación sexual</li>
+        <li><span class="number"></span> Amenazas de muerte</li>
+      </ul>
+    </section>
+
+    <!-- Gráfica -->
+    <section class="chart-container">
+      <h3>Violencia en parejas en la CDMX</h3>
+      <p>La siguiente gráfica muestra datos ficticios sobre las formas de violencia más reportadas:</p>
+      <div class="chart-bar">
+        <div class="chart-label">Violencia psicológica:</div>
+        <div class="bar bar-80"></div>
+        <span> 80% </span>
+      </div>
+      <div class="chart-bar">
+        <div class="chart-label">Violencia física:</div>
+        <div class="bar bar-50"></div>
+        <span> 50% </span>
+      </div>
+      <div class="chart-bar">
+        <div class="chart-label">Violencia sexual:</div>
+        <div class="bar bar-30"></div>
+        <span> 30% </span>
+      </div>
+    </section>
+
+    <!-- Líneas de ayuda -->
+    <footer>
+      <h4>LÍNEAS DE AYUDA</h4>
+      <p>911 - Emergencias</p>
+      <p>Línea Violencia de Género: 800-XXX-XXXX</p>
+    </footer>
+  </div>
+</body>
+</html>
